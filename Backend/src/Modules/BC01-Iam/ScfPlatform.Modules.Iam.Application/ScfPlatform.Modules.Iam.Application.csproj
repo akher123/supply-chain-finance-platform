@@ -8,15 +8,14 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\ScfPlatform.BuildingBlocks.Application\ScfPlatform.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\ScfPlatform.Modules.Iam.Contracts\ScfPlatform.Modules.Iam.Contracts.csproj" />
     <ProjectReference Include="..\ScfPlatform.Modules.Iam.Domain\ScfPlatform.Modules.Iam.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\" />
     <Folder Include="Activation\" />
     <Folder Include="Admin\" />
     <Folder Include="Common\" />
-    <Folder Include="InboundEvents\" />
     <Folder Include="Login\" />
     <Folder Include="Mfa\" />
     <Folder Include="Tokens\" />

@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\ScfPlatform.BuildingBlocks.Domain\ScfPlatform.BuildingBlocks.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
