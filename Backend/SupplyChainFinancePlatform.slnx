@@ -1,0 +1,18 @@
+<Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="src/BuildingBlocks/ScfPlatform.BuildingBlocks.Application/ScfPlatform.BuildingBlocks.Application.csproj" Id="833f4851-0180-400d-87ac-d521c3e822df" />
+    <Project Path="src/BuildingBlocks/ScfPlatform.BuildingBlocks.Domain/ScfPlatform.BuildingBlocks.Domain.csproj" Id="60da4444-8e09-4f30-8694-1533ab06dd11" />
+    <Project Path="src/BuildingBlocks/ScfPlatform.BuildingBlocks.Infrastructure/ScfPlatform.BuildingBlocks.Infrastructure.csproj" Id="68dae1b7-2573-4975-8158-1b834508847e" />
+  </Folder>
+  <Folder Name="/Host/">
+    <Project Path="src/Host/ScfPlatform.Api/ScfPlatform.Api.csproj" Id="f176be11-8699-4956-b1d0-243b84932af9" />
+  </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/BC01-Iam/">
+    <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Api/ScfPlatform.Modules.Iam.Api.csproj" Id="2e7f363e-69be-4398-af72-0b9067eea7d5" />
+    <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Application/ScfPlatform.Modules.Iam.Application.csproj" Id="b4fea4b5-2cd8-43de-a3c6-27f1eb4f847d" />
+    <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Contracts/ScfPlatform.Modules.Iam.Contracts.csproj" Id="55955e4d-e0b0-4d55-9757-6c5ae83e86ce" />
+    <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Domain/ScfPlatform.Modules.Iam.Domain.csproj" Id="15402805-e91a-4b87-ac51-a9e1542a0f4b" />
+    <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Infrastructure/ScfPlatform.Modules.Iam.Infrastructure.csproj" Id="07e5868a-5a4c-47de-a55c-b84156df4a9b" />
+  </Folder>
+</Solution>
