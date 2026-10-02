@@ -13,9 +13,9 @@
 
   <ItemGroup>
     <Folder Include="BackgroundJobs\" />
+    <Folder Include="Persistence\Configurations\" />
     <Folder Include="Security\" />
     <Folder Include="Repositories\" />
-    <Folder Include="Persistence\" />
   </ItemGroup>
 
 </Project>
