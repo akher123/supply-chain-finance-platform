@@ -11,4 +11,11 @@
     <ProjectReference Include="..\ScfPlatform.Modules.Iam.Application\ScfPlatform.Modules.Iam.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="BackgroundJobs\" />
+    <Folder Include="Security\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Persistence\" />
+  </ItemGroup>
+
 </Project>

@@ -10,4 +10,9 @@
     <ProjectReference Include="..\ScfPlatform.Modules.Iam.Application\ScfPlatform.Modules.Iam.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Authentication\" />
+    <Folder Include="Endpoints\" />
+  </ItemGroup>
+
 </Project>
