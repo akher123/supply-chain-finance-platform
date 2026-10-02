@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ScfPlatform.Modules.Iam.Application\ScfPlatform.Modules.Iam.Application.csproj" />
+  </ItemGroup>
+
 </Project>
