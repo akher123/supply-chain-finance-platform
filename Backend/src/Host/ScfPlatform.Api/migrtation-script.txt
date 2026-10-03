@@ -1,0 +1,1 @@
+ Add-Migration InitialCreate -Context IamDbContext -OutputDir Persistence\Migrations -StartupProject ScfPlatform.Api

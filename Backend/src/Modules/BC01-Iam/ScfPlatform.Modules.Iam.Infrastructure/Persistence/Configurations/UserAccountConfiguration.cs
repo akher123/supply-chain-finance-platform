@@ -1,9 +1,8 @@
-using ScfPlatform.BuildingBlocks.Application;
-using ScfPlatform.BuildingBlocks.Infrastructure;
-using ScfPlatform.Modules.Iam.Domain.Aggregates;
-using ScfPlatform.Modules.Iam.Domain.Ids;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using ScfPlatform.BuildingBlocks.Application;
+using ScfPlatform.Modules.Iam.Domain.Aggregates;
+using ScfPlatform.Modules.Iam.Domain.Ids;
 
 namespace ScfPlatform.Modules.Iam.Infrastructure.Persistence.Configurations;
 
@@ -24,7 +23,7 @@ public sealed class UserAccountConfiguration : IEntityTypeConfiguration<UserAcco
         builder.HasKey(a => a.Id);
         builder.Property(a => a.Id)
             .HasConversion(StronglyTypedIdValueConverter.Create(v => new UserAccountId(v)))
-            .HasColumnName("id")
+            .HasColumnName("Id")
             .ValueGeneratedNever();
 
         // Credential is split into scalar columns (§11.2) — email/mobile/role/status are queried
@@ -105,7 +104,7 @@ public sealed class UserAccountConfiguration : IEntityTypeConfiguration<UserAcco
             sessions.UsePropertyAccessMode(PropertyAccessMode.Field);
             sessions.WithOwner().HasForeignKey("UserAccountId");
             sessions.HasKey(s => s.Id);
-            sessions.Property(s => s.Id).HasConversion(StronglyTypedIdValueConverter.Create(v => new SessionId(v))).HasColumnName("id").ValueGeneratedNever();
+            sessions.Property(s => s.Id).HasConversion(StronglyTypedIdValueConverter.Create(v => new SessionId(v))).HasColumnName("Id").ValueGeneratedNever();
             sessions.Property(s => s.Channel).HasColumnName("Channel").HasConversion<string>().IsRequired();
             sessions.OwnsOne(s => s.DeviceFingerprint, fp => fp.Property(f => f.Value).HasColumnName("DeviceFingerprint").IsRequired());
             sessions.Property(s => s.RefreshTokenHash).HasColumnName("RefreshTokenHash").IsRequired();
@@ -157,7 +156,7 @@ public sealed class UserAccountConfiguration : IEntityTypeConfiguration<UserAcco
             tokens.UsePropertyAccessMode(PropertyAccessMode.Field);
             tokens.WithOwner().HasForeignKey("UserAccountId");
             tokens.HasKey(t => t.Id);
-            tokens.Property(t => t.Id).HasConversion(StronglyTypedIdValueConverter.Create(v => new PasswordResetTokenId(v))).HasColumnName("id").ValueGeneratedNever();
+            tokens.Property(t => t.Id).HasConversion(StronglyTypedIdValueConverter.Create(v => new PasswordResetTokenId(v))).HasColumnName("Id").ValueGeneratedNever();
             tokens.Property(t => t.TokenHash).HasColumnName("TokenHash").IsRequired();
             tokens.Property(t => t.IssuedOnUtc).HasColumnName("IssuedOnUtc");
             tokens.Property(t => t.ExpiresOnUtc).HasColumnName("ExpiresOnUtc");
