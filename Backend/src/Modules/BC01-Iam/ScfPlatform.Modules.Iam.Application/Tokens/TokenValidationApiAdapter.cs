@@ -4,7 +4,7 @@ using MediatR;
 
 namespace ScfPlatform.Modules.Iam.Application.Tokens;
 
-/// <summary>Adapter for this module's frozen <c>ITokenValidationApi</c> (Contracts §9.3) — used by the host's authentication middleware. See <see cref="CogniJobs.Modules.Iam.Application.Provisioning.IdentityProvisioningApiAdapter"/> for why this lives in Application.</summary>
+/// <summary>Adapter for this module's frozen <c>ITokenValidationApi</c> (Contracts §9.3) — used by the host's authentication middleware. See <see cref="Provisioning.IdentityProvisioningApiAdapter"/> for why this lives in Application.</summary>
 public sealed class TokenValidationApiAdapter : ITokenValidationApi
 {
     private readonly ISender _sender;
