@@ -7,6 +7,8 @@ using ScfPlatform.BuildingBlocks.Application;
 using ScfPlatform.BuildingBlocks.Infrastructure;
 using ScfPlatform.BuildingBlocks.Infrastructure.Outbox;
 using ScfPlatform.Modules.Iam.Application.Abstractions;
+using ScfPlatform.Modules.Iam.Application.Tokens;
+using ScfPlatform.Modules.Iam.Contracts;
 using ScfPlatform.Modules.Iam.Infrastructure.BackgroundJobs;
 using ScfPlatform.Modules.Iam.Infrastructure.Persistence;
 using ScfPlatform.Modules.Iam.Infrastructure.Repositories;
@@ -29,7 +31,7 @@ public static class IamModuleRegistration
         // One physical SQL Server database for the whole modular monolith — each module's schema
         // (Foundations §6.4) provides the isolation, not a separate database/connection string.
         var connectionString = configuration.GetConnectionString("SqlServer")
-            ?? "Server=localhost;Database=bdjobs;User Id=bdjobs;Password=bdjobs;TrustServerCertificate=True";
+            ?? "Server=localhost;Database=ScfPlatform;Trusted_Connection=True;TrustServerCertificate=True";
 
         services.AddDbContext<IamDbContext>((sp, options) =>
             options.UseSqlServer(connectionString).AddInterceptors(sp.GetRequiredService<DomainEventDispatchInterceptor>()));
@@ -57,8 +59,8 @@ public static class IamModuleRegistration
         services.AddSingleton<ITotpProvider, Rfc6238TotpProvider>();
 
         // §9.3 public API — the frozen Contracts surface every other module references.
-        //services.AddScoped<IIdentityProvisioningApi, IdentityProvisioningApiAdapter>();
-        //services.AddScoped<ITokenValidationApi, TokenValidationApiAdapter>();
+       // services.AddScoped<IIdentityProvisioningApi, IdentityProvisioningApiAdapter>();
+        services.AddScoped<ITokenValidationApi, TokenValidationApiAdapter>();
 
         // Outbox relay (§6.2) — publishes this module's outbound integration events.
         services.AddHostedService(sp => new OutboxRelayBackgroundService<IamDbContext>(
