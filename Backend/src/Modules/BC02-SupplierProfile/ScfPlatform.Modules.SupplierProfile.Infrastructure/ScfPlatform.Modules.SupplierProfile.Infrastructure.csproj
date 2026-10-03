@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\ScfPlatform.BuildingBlocks.Infrastructure\ScfPlatform.BuildingBlocks.Infrastructure.csproj" />
     <ProjectReference Include="..\ScfPlatform.Modules.SupplierProfile.Application\ScfPlatform.Modules.SupplierProfile.Application.csproj" />
   </ItemGroup>
 
