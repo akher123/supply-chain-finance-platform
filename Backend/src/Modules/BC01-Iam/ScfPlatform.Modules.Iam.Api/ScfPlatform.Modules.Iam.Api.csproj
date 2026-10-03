@@ -10,9 +10,18 @@
     <ProjectReference Include="..\ScfPlatform.Modules.Iam.Application\ScfPlatform.Modules.Iam.Application.csproj" />
   </ItemGroup>
 
+
   <ItemGroup>
-    <Folder Include="Authentication\" />
-    <Folder Include="Endpoints\" />
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+
+  <!-- Plain Microsoft.NET.Sdk (not Sdk.Web) doesn't bring ASP.NET Core's implicit global usings —
+       add the ones this project's Minimal API endpoint/auth code needs. -->
+  <ItemGroup>
+    <Using Include="Microsoft.AspNetCore.Builder" />
+    <Using Include="Microsoft.AspNetCore.Http" />
+    <Using Include="Microsoft.AspNetCore.Routing" />
+  </ItemGroup>
+
 
 </Project>

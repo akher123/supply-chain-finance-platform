@@ -13,15 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Activation\" />
-    <Folder Include="Admin\" />
-    <Folder Include="Common\" />
-    <Folder Include="Login\" />
-    <Folder Include="Mfa\" />
-    <Folder Include="Tokens\" />
-    <Folder Include="Queries\" />
     <Folder Include="Provisioning\" />
-    <Folder Include="PasswordManagement\" />
+    <Folder Include="Provisioning\" />
   </ItemGroup>
 
 </Project>
