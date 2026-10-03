@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\ScfPlatform.BuildingBlocks.Application\ScfPlatform.BuildingBlocks.Application.csproj" />
+    <ProjectReference Include="..\ScfPlatform.Modules.SupplierProfile.Contracts\ScfPlatform.Modules.SupplierProfile.Contracts.csproj" />
+    <ProjectReference Include="..\ScfPlatform.Modules.SupplierProfile.Domain\ScfPlatform.Modules.SupplierProfile.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

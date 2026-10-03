@@ -15,4 +15,11 @@
     <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Domain/ScfPlatform.Modules.Iam.Domain.csproj" Id="15402805-e91a-4b87-ac51-a9e1542a0f4b" />
     <Project Path="src/Modules/BC01-Iam/ScfPlatform.Modules.Iam.Infrastructure/ScfPlatform.Modules.Iam.Infrastructure.csproj" Id="07e5868a-5a4c-47de-a55c-b84156df4a9b" />
   </Folder>
+  <Folder Name="/Modules/BC02-SupplierProfile/">
+    <Project Path="src/Modules/BC02-SupplierProfile/ScfPlatform.Modules.SupplierProfile.Api/ScfPlatform.Modules.SupplierProfile.Api.csproj" />
+    <Project Path="src/Modules/BC02-SupplierProfile/ScfPlatform.Modules.SupplierProfile.Application/ScfPlatform.Modules.SupplierProfile.Application.csproj" Id="ab777670-c5df-4bc8-9033-c08371521d26" />
+    <Project Path="src/Modules/BC02-SupplierProfile/ScfPlatform.Modules.SupplierProfile.Contracts/ScfPlatform.Modules.SupplierProfile.Contracts.csproj" Id="8b5f7510-c82e-48c0-976b-d881842fb052" />
+    <Project Path="src/Modules/BC02-SupplierProfile/ScfPlatform.Modules.SupplierProfile.Domain/ScfPlatform.Modules.SupplierProfile.Domain.csproj" Id="de7baf9e-2ac0-4725-80ad-66706bfbf162" />
+    <Project Path="src/Modules/BC02-SupplierProfile/ScfPlatform.Modules.SupplierProfile.Infrastructure/ScfPlatform.Modules.SupplierProfile.Infrastructure.csproj" Id="d2082a61-c91c-45ab-8f31-a3467853689c" />
+  </Folder>
 </Solution>
